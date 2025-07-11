@@ -59,26 +59,29 @@
     update();
   }
 
-  // Scroll-triggered counter
-  document.addEventListener("DOMContentLoaded", function () {
-    const counter = document.getElementById("attendeeCount");
-    const target = parseInt(counter.getAttribute("data-target"), 10);
-    let count = 0;
 
-    const updateCount = () => {
-      const increment = Math.ceil(target / 100); // speed control
-      if (count < target) {
-        count += increment;
-        if (count > target) count = target;
-        counter.innerText = count;
-        setTimeout(updateCount, 20);
-      } else {
-        counter.innerText = target + "+"; // show "+" after reaching the target
-      }
-    };
+// number increase
+  
+  const counter = document.getElementById('attendeeCount');
+  const target = +counter.getAttribute('data-target');
+  let count = 0;
 
-    updateCount();
-  });
+  const updateCount = () => {
+    const speed = 200; // Change this to adjust speed
+    const increment = target / speed;
+
+    if (count < target) {
+      count += increment;
+      counter.innerText = Math.ceil(count).toLocaleString(); // Add comma
+      requestAnimationFrame(updateCount);
+    } else {
+      counter.innerText = target.toLocaleString(); // Final value
+    }
+  };
+
+  updateCount();
+
+
   // navbar
 
 
