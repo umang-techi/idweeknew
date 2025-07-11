@@ -1,0 +1,148 @@
+
+
+<div id="topform-section">
+  <!-- Section Header -->
+  <section class="contactpic">
+    <span class="text1">Housing</span>
+    <div class="breadcrumb">
+      <p><a href="index.php">Home</a> <span>→</span> Housing</p>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <div class="container housing-page">
+    <div class="row">
+      <div class="col-md-1"></div>
+
+      <!-- Left Image -->
+      <div class="col-lg-5" data-aos="fade-right">
+        <img src="assets/img/housing.jpg" alt="Housing Image" class="img img-fluid">
+      </div>
+
+      <!-- Right Form -->
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="form-section">
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="housing">
+              <h2 class="text-center mb-4">Housing Request</h2>
+
+              <form action="thanks.php" name="form2" id="form2" method="post" class="form" onsubmit="return chk_housing();">
+                <div class="form-row row">
+
+                  <!-- Full Name -->
+                  <div class="position-relative form-group col-12">
+                    <div class="input-wrapper">
+                      <i class="fas fa-user form-control-icon"></i>
+                      <input type="text" name="Name" id="txtName" class="form-control with-icon" placeholder="Full Name" required>
+                      <div class="invalid-feedback">Full Name is required.</div>
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                  <!-- Email (this will be submitted) -->
+                    <div class="position-relative form-group col-12">
+                   <div class="input-wrapper">
+                    <i class="fas fa-envelope form-control-icon"></i>
+                    <input type="email" name="Email" id="firstemail" class="form-control with-icon" placeholder="Enter Email Address" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                   </div>
+
+                    <!-- Confirm Email (for checking only, NOT submitted) -->
+                   <div class="position-relative form-group col-12">
+                     <div class="input-wrapper">
+                      <i class="fas fa-envelope form-control-icon"></i>
+                        <input type="email" id="housemail" class="form-control with-icon" placeholder="Re-enter Email Address" required>
+                        <div class="invalid-feedback">Emails do not match.</div>
+                        </div>
+                        </div>
+
+
+                  <!-- Contact Number -->
+                  <div class="position-relative form-group col-12">
+                    <div class="input-wrapper">
+                      <i class="fas fa-phone form-control-icon"></i>
+                      <input type="text" name="Mobile" id="txtMobile" class="form-control with-icon" placeholder="Contact Number" required>
+                      <div class="invalid-feedback">Please enter your contact number.</div>
+                    </div>
+                  </div>
+
+                  <!-- Hotel Category -->
+                  <div class="position-relative form-group col-12">
+                    <div class="input-wrapper">
+                      <i class="fas fa-star form-control-icon"></i>
+                      <select class="form-control" name="Category" id="txthotelcategory" required>
+                        <option selected disabled value="">Hotel Category</option>
+                        <option>2 Star</option>
+                        <option>3 Star</option>
+                        <option>4 Star</option>
+                        <option>5 Star</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a hotel category.</div>
+                    </div>
+                  </div>
+
+                  <!-- Check-in -->
+                  <div class="position-relative form-group col-12 col-sm-6">
+                    <div class="input-wrapper">
+                      <i class="fas fa-calendar-alt form-control-icon"></i>
+                      <input type="text" name="Check-In" id="txtchkin" class="form-control with-icon" placeholder="Check In" required>
+                      <div class="invalid-feedback">Please enter a check-in date.</div>
+                    </div>
+                  </div>
+
+                  <!-- Check-out -->
+                  <div class="position-relative form-group col-12 col-sm-6">
+                    <div class="input-wrapper">
+                      <i class="fas fa-calendar-check form-control-icon"></i>
+                      <input type="text" name="Check-Out" id="txtchkout" class="form-control with-icon" placeholder="Check Out" required>
+                      <div class="invalid-feedback">Please enter a check-out date.</div>
+                    </div>
+                  </div>
+
+                  <!-- Budget -->
+                  <div class="position-relative form-group col-12 col-sm-6">
+                    <div class="input-wrapper">
+                      <i class="fas fa-dollar-sign form-control-icon"></i>
+                      <input type="text" name="Budget" id="perdaybudget" class="form-control with-icon" placeholder="Per Day Budget" required>
+                      <div class="invalid-feedback">Please enter your per day budget.</div>
+                    </div>
+                  </div>
+
+                  <!-- Number of Rooms -->
+                  <div class="position-relative form-group col-12 col-sm-6">
+                    <div class="input-wrapper">
+                      <i class="fas fa-door-open form-control-icon"></i>
+                      <select name="Rooms" id="norooms" class="form-control with-icon" required>
+                        <option value="" selected>Number Of Rooms</option>
+                        
+                        <option value="25+">25+</option>
+                      </select>
+                      <div class="invalid-feedback">Please select the number of rooms.</div>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="justicent col-12">
+                    <button type="submit" class="playbtn">
+                      Submit Housing
+                      <span></span><span></span><span></span><span></span>
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+
+              <!-- Optional: JavaScript validation can be added here -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</div>
+
+

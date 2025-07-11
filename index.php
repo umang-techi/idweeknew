@@ -1,0 +1,720 @@
+<?php include 'includes/header.php'; ?>
+
+<!-- Hero -->
+ 
+<div id="topform-section" class="py-5 bgslido">
+  <div class="container">
+    <div class="row g-0 align-items-stretch">
+      <!-- Left Side: Event Info -->
+      <div class="col-lg-5 text-white d-flex align-items-center justify-content-center p-5 hero-slide">
+        <section class="hero-section">
+          <!-- Title -->
+          <div class="event-title">
+            <h1>IDWeek 2025</h1>
+            <img src="assets/img/arrow.png" class="img-fluid rounded" alt="Arrow">
+          </div>
+
+          <!-- Subtitle / Description -->
+          <div class="event-description mt-3" data-aos="fade-right">
+            Infectious Diseases Week: Annual Meeting Featuring IDSA, SHEA, HIVMA, PIDS, and SIDP 
+            SHEA, HIVMA, PIDS, and SIDP
+          </div>
+
+          <!-- Location -->
+          <div class="event-location mt-3" data-aos="fade-left">
+            <i class="fas fa-map-marker-alt"></i> Georgia World Congress Center, Atlanta, Georgia, USA
+          </div>
+
+          <!-- Event Date -->
+          <div class="event-date mt-3" data-aos="fade-right">
+            <i class="fas fa-calendar-alt"></i> October 19th - 22nd, 2025 | Atlanta, GA
+          </div>
+        </section> <!-- Closing the hero-section -->
+      </div>
+
+      <!-- Countdown Section -->
+      <div class="col-lg-3">
+        <div class="countdown-container">
+          <div class="countdown" id="countdown" data-aos="fade-left">
+            <div class="time-box">
+              <h3 id="days">00</h3>
+              <span>Days</span>
+            </div>
+            <div class="time-box">
+              <h3 id="hours">00</h3>
+              <span>Hours</span>
+            </div>
+            <div class="time-box">
+              <h3 id="minutes">00</h3>
+              <span>Minutes</span>
+            </div>
+            <div class="time-box">
+              <h3 id="seconds">00</h3>
+              <span>Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Appointment Form Section -->
+      <div class="col-lg-4">
+        <div class="form-section">
+          <ul class="nav nav-pills nav-justified mb-4 t p-1" id="appointmentTabs" data-aos="fade-left">
+            <li class="nav-item">
+              <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#registration">
+                <i class="fas fa-edit me-1"></i> Registration
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#housing">
+                <i class="fas fa-hotel me-1"></i> Housing
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <!-- Registration Form -->
+            <div class="tab-pane fade show active" id="registration" data-aos="fade-left">
+              <h4 class="text-center mb-4">Registration Request</h4>
+              <form action="thanks.php" name="form2" id="form2" method="post" class="form" onsubmit="return chk_frm();">
+                <div class="form-row row">
+                  <!-- Full Name -->
+                  <div class="col-12 form-group position-relative">
+                    <div class="input-wrapper">
+                      <i class="fas fa-user form-control-icon"></i>
+                      <input type="text" name="Name" id="txtName" class="form-control with-icon" placeholder="Full Name" required>
+                      <div class="invalid-feedback">Full Name is required.</div>
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                 <div class="col-12 form-group position-relative">
+                <div class="input-wrapper">
+                  <i class="fas fa-envelope form-control-icon"></i>
+                  <input type="email" name="Email" id="txtEmail" class="form-control with-icon" placeholder="Enter Email Address" required>
+                </div>
+              </div>
+
+              <!-- Confirm Email -->
+              <div class="col-12 form-group position-relative">
+                <div class="input-wrapper">
+                  <i class="fas fa-envelope form-control-icon"></i>
+                  <input type="email" name="Email" id="regismail" class="form-control with-icon" placeholder="Re Enter Email Address" required>
+                <div id="email-error" class="invalid-feedback">Emails do not match.</div>
+                </div>
+              </div>
+
+                  <!-- Contact Number -->
+                  <div class="col-12 form-group position-relative">
+                    <div class="input-wrapper">
+                      <i class="fas fa-phone form-control-icon"></i>
+                      <input type="text" name="Mobile" id="txtMobile" class="form-control with-icon" placeholder="Contact Number" required>
+                    </div>
+                  </div>
+
+                  <!-- Occupation -->
+                  <div class="col-12 form-group position-relative">
+                    <div class="input-wrapper">
+                      <i class="fas fa-briefcase form-control-icon"></i>
+                      <input type="text" name="Occupation" id="txtoccupation" class="form-control with-icon" placeholder="Occupation" required>
+                    </div>
+                  </div>
+
+                  <!-- Country -->
+                  <div class="col-md-6 form-group position-relative">
+                    <div class="input-wrapper">
+                      <i class="fas fa-globe form-control-icon"></i>
+                      <select class="form-control with-icon" name="Country" id="txtcountry" required>
+                        <option value="" selected="selected" disabled="">Select Country</option>
+                        <optgroup label="North America">
+                          <option value="US">United States</option>
+                          <option value="UM">United States Minor Outlying Islands</option>
+                          <option value="CA">Canada</option>
+                          <option value="MX">Mexico</option>
+                          <option value="AI">Anguilla</option>
+                          <option value="AG">Antigua and Barbuda</option>
+                          <option value="AW">Aruba</option>
+                          <option value="BS">Bahamas</option>
+                          <option value="BB">Barbados</option>
+                          <option value="BZ">Belize</option>
+                          <option value="BM">Bermuda</option>
+                          <option value="VG">British Virgin Islands</option>
+                          <option value="KY">Cayman Islands</option>
+                          <option value="CR">Costa Rica</option>
+                          <option value="CU">Cuba</option>
+                          <option value="DM">Dominica</option>
+                          <option value="DO">Dominican Republic</option>
+                          <option value="SV">El Salvador</option>
+                          <option value="GD">Grenada</option>
+                          <option value="GP">Guadeloupe</option>
+                          <option value="GT">Guatemala</option>
+                          <option value="HT">Haiti</option>
+                          <option value="HN">Honduras</option>
+                          <option value="JM">Jamaica</option>
+                          <option value="MQ">Martinique</option>
+                          <option value="MS">Montserrat</option>
+                          <option value="AN">Netherlands Antilles</option>
+                          <option value="NI">Nicaragua</option>
+                          <option value="PA">Panama</option>
+                          <option value="PR">Puerto Rico</option>
+                          <option value="KN">Saint Kitts and Nevis</option>
+                          <option value="LC">Saint Lucia</option>
+                          <option value="VC">Saint Vincent and the Grenadines</option>
+                          <option value="TT">Trinidad and Tobago</option>
+                          <option value="TC">Turks and Caicos Islands</option>
+                          <option value="VI">US Virgin Islands</option>
+                        </optgroup>
+                        <optgroup label="South America">
+                          <option value="AR">Argentina</option>
+                          <option value="BO">Bolivia</option>
+                          <option value="BR">Brazil</option>
+                          <option value="CL">Chile</option>
+                          <option value="CO">Colombia</option>
+                          <option value="EC">Ecuador</option>
+                          <option value="FK">Falkland Islands (Malvinas)</option>
+                          <option value="GF">French Guiana</option>
+                          <option value="GY">Guyana</option>
+                          <option value="PY">Paraguay</option>
+                          <option value="PE">Peru</option>
+                          <option value="SR">Suriname</option>
+                          <option value="UY">Uruguay</option>
+                          <option value="VE">Venezuela</option>
+                        </optgroup>
+                        <optgroup label="Europe">
+                          <option value="GB">United Kingdom</option>
+                          <option value="AL">Albania</option>
+                          <option value="AD">Andorra</option>
+                          <option value="AT">Austria</option>
+                          <option value="BY">Belarus</option>
+                          <option value="BE">Belgium</option>
+                          <option value="BA">Bosnia and Herzegovina</option>
+                          <option value="BG">Bulgaria</option>
+                          <option value="HR">Croatia (Hrvatska)</option>
+                          <option value="CY">Cyprus</option>
+                          <option value="CZ">Czech Republic</option>
+                          <option value="FR">France</option>
+                          <option value="GI">Gibraltar</option>
+                          <option value="DE">Germany</option>
+                          <option value="GR">Greece</option>
+                          <option value="VA">Holy See (Vatican City State)</option>
+                          <option value="HU">Hungary</option>
+                          <option value="IT">Italy</option>
+                          <option value="LI">Liechtenstein</option>
+                          <option value="LU">Luxembourg</option>
+                          <option value="MK">Macedonia</option>
+                          <option value="MT">Malta</option>
+                          <option value="MD">Moldova</option>
+                          <option value="MC">Monaco</option>
+                          <option value="ME">Montenegro</option>
+                          <option value="NL">Netherlands</option>
+                          <option value="PL">Poland</option>
+                          <option value="PT">Portugal</option>
+                          <option value="RO">Romania</option>
+                          <option value="SM">San Marino</option>
+                          <option value="RS">Serbia</option>
+                          <option value="SK">Slovakia</option>
+                          <option value="SI">Slovenia</option>
+                          <option value="ES">Spain</option>
+                          <option value="UA">Ukraine</option>
+                          <option value="DK">Denmark</option>
+                          <option value="EE">Estonia</option>
+                          <option value="FO">Faroe Islands</option>
+                          <option value="FI">Finland</option>
+                          <option value="GL">Greenland</option>
+                          <option value="IS">Iceland</option>
+                          <option value="IE">Ireland</option>
+                          <option value="LV">Latvia</option>
+                          <option value="LT">Lithuania</option>
+                          <option value="NO">Norway</option>
+                          <option value="SJ">Svalbard and Jan Mayen Islands</option>
+                          <option value="SE">Sweden</option>
+                          <option value="CH">Switzerland</option>
+                          <option value="TR">Turkey</option>
+                        </optgroup>
+                        <optgroup label="Asia">
+                          <option value="AF">Afghanistan</option>
+                          <option value="AM">Armenia</option>
+                          <option value="AZ">Azerbaijan</option>
+                          <option value="BH">Bahrain</option>
+                          <option value="BD">Bangladesh</option>
+                          <option value="BT">Bhutan</option>
+                          <option value="IO">British Indian Ocean Territory</option>
+                          <option value="BN">Brunei Darussalam</option>
+                          <option value="KH">Cambodia</option>
+                          <option value="CN">China</option>
+                          <option value="CX">Christmas Island</option>
+                          <option value="CC">Cocos (Keeling) Islands</option>
+                          <option value="GE">Georgia</option>
+                          <option value="HK">Hong Kong</option>
+                          <option value="IN">India</option>
+                          <option value="ID">Indonesia</option>
+                          <option value="IR">Iran</option>
+                          <option value="IQ">Iraq</option>
+                          <option value="IL">Israel</option>
+                          <option value="JP">Japan</option>
+                          <option value="JO">Jordan</option>
+                          <option value="KZ">Kazakhstan</option>
+                          <option value="KP">Korea, Democratic People's Republic of</option>
+                          <option value="KR">Korea, Republic of</option>
+                          <option value="KW">Kuwait</option>
+                          <option value="KG">Kyrgyzstan</option>
+                          <option value="LA">Lao</option>
+                          <option value="LB">Lebanon</option>
+                          <option value="MY">Malaysia</option>
+                          <option value="MV">Maldives</option>
+                          <option value="MN">Mongolia</option>
+                          <option value="MM">Myanmar (Burma)</option>
+                          <option value="NP">Nepal</option>
+                          <option value="OM">Oman</option>
+                          <option value="PK">Pakistan</option>
+                          <option value="PH">Philippines</option>
+                          <option value="QA">Qatar</option>
+                          <option value="RU">Russian Federation</option>
+                          <option value="SA">Saudi Arabia</option>
+                          <option value="SG">Singapore</option>
+                          <option value="LK">Sri Lanka</option>
+                          <option value="SY">Syria</option>
+                          <option value="TW">Taiwan</option>
+                          <option value="TJ">Tajikistan</option>
+                          <option value="TH">Thailand</option>
+                          <option value="TP">East Timor</option>
+                          <option value="TM">Turkmenistan</option>
+                          <option value="AE">United Arab Emirates</option>
+                          <option value="UZ">Uzbekistan</option>
+                          <option value="VN">Vietnam</option>
+                          <option value="YE">Yemen</option>
+                        </optgroup>
+                        <optgroup label="Australia / Oceania">
+                          <option value="AS">American Samoa</option>
+                          <option value="AU">Australia</option>
+                          <option value="CK">Cook Islands</option>
+                          <option value="FJ">Fiji</option>
+                          <option value="PF">French Polynesia (Tahiti)</option>
+                          <option value="GU">Guam</option>
+                          <option value="KB">Kiribati</option>
+                          <option value="MH">Marshall Islands</option>
+                          <option value="FM">Micronesia, Federated States of</option>
+                          <option value="NR">Nauru</option>
+                          <option value="NC">New Caledonia</option>
+                          <option value="NZ">New Zealand</option>
+                          <option value="NU">Niue</option>
+                          <option value="MP">Northern Mariana Islands</option>
+                          <option value="PW">Palau</option>
+                          <option value="PG">Papua New Guinea</option>
+                          <option value="PN">Pitcairn</option>
+                          <option value="WS">Samoa</option>
+                          <option value="SB">Solomon Islands</option>
+                          <option value="TK">Tokelau</option>
+                          <option value="TO">Tonga</option>
+                          <option value="TV">Tuvalu</option>
+                          <option value="VU">Vanuatu</option>
+                          <option value="WF">Wallis and Futuna Islands</option>
+                        </optgroup>
+                        <optgroup label="Africa">
+                          <option value="DZ">Algeria</option>
+                          <option value="AO">Angola</option>
+                          <option value="BJ">Benin</option>
+                          <option value="BW">Botswana</option>
+                          <option value="BF">Burkina Faso</option>
+                          <option value="BI">Burundi</option>
+                          <option value="CM">Cameroon</option>
+                          <option value="CV">Cape Verde</option>
+                          <option value="CF">Central African Republic</option>
+                          <option value="TD">Chad</option>
+                          <option value="KM">Comoros</option>
+                          <option value="CG">Congo</option>
+                          <option value="CD">Congo, the Democratic Republic of the</option>
+                          <option value="DJ">Dijibouti</option>
+                          <option value="EG">Egypt</option>
+                          <option value="GQ">Equatorial Guinea</option>
+                          <option value="ER">Eritrea</option>
+                          <option value="ET">Ethiopia</option>
+                          <option value="GA">Gabon</option>
+                          <option value="GM">Gambia</option>
+                          <option value="GH">Ghana</option>
+                          <option value="GN">Guinea</option>
+                          <option value="GW">Guinea-Bissau</option>
+                          <option value="CI">Cote d'Ivoire (Ivory Coast)</option>
+                          <option value="KE">Kenya</option>
+                          <option value="LS">Lesotho</option>
+                          <option value="LR">Liberia</option>
+                          <option value="LY">Libya</option>
+                          <option value="MG">Madagascar</option>
+                          <option value="MW">Malawi</option>
+                          <option value="ML">Mali</option>
+                          <option value="MR">Mauritania</option>
+                          <option value="MU">Mauritius</option>
+                          <option value="YT">Mayotte</option>
+                          <option value="MA">Morocco</option>
+                          <option value="MZ">Mozambique</option>
+                          <option value="NA">Namibia</option>
+                          <option value="NE">Niger</option>
+                          <option value="NG">Nigeria</option>
+                          <option value="RE">Reunion</option>
+                          <option value="RW">Rwanda</option>
+                          <option value="ST">Sao Tome and Principe</option>
+                          <option value="SH">Saint Helena</option>
+                          <option value="SN">Senegal</option>
+                          <option value="SC">Seychelles</option>
+                          <option value="SL">Sierra Leone</option>
+                          <option value="SO">Somalia</option>
+                          <option value="ZA">South Africa</option>
+                          <option value="SS">South Sudan</option>
+                          <option value="SD">Sudan</option>
+                          <option value="SZ">Swaziland</option>
+                          <option value="TZ">Tanzania</option>
+                          <option value="TG">Togo</option>
+                          <option value="TN">Tunisia</option>
+                          <option value="UG">Uganda</option>
+                          <option value="EH">Western Sahara</option>
+                          <option value="ZM">Zambia</option>
+                          <option value="ZW">Zimbabwe</option>
+                        </optgroup>
+                        <option value="AQ">Antarctica</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Delegates -->
+                  <div class="col-md-6 form-group position-relative">
+                    <div class="input-wrapper delic">
+                      <i class="fas fa-users form-control-icon"></i>
+                      <select class="form-control with-icon" name="Delegates" id="txtdelegates" required>
+                        <option value="" selected="selected" disabled="">No.of Delegates</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="25+">25+</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Address -->
+                  <div class="col-12 form-group position-relative">
+                    <div class="input-wrapper addy">
+                      <i class="fas fa-home form-control-icon"></i>
+                      <textarea class="form-control with-icon" name="Address" id="txtaddres" rows="2" placeholder="Address" required></textarea>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="col-12 text-center">
+                    <button type="submit" class="playbtn">
+                      Submit Registration
+                      <span></span><span></span><span></span><span></span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Housing Form -->
+            <div class="tab-pane fade" id="housing">
+              <h4 class="text-center mb-4">Housing Request</h4>
+              <form action="thanks.php" name="form2" id="form2" method="post" class="form" onsubmit="return chk_housing();">
+                <div class="form-row row">
+                  <!-- Full Name -->
+                  <div class="position-relative form-group col-12">
+                    <div class="input-wrapper">
+                      <i class="fas fa-user form-control-icon"></i>
+                      <input type="text" name="Name" id="txtName" class="form-control with-icon" placeholder="Full Name" required>
+                      <div class="invalid-feedback">Full Name is required.</div>
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+               <div class="position-relative form-group col-12">
+             <div class="input-wrapper">
+             <i class="fas fa-envelope form-control-icon"></i>
+            <input type="email" name="Email" id="firstemail" class="form-control with-icon" placeholder="Enter Email Address" required>
+               <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              </div>
+
+                     <!-- Confirm Email (for checking only, NOT submitted) -->
+              <div class="position-relative form-group col-12">
+               <div class="input-wrapper">
+                   <i class="fas fa-envelope form-control-icon"></i>
+                <input type="email" id="housemail" class="form-control with-icon" placeholder="Re-enter Email Address" required>
+                  <div class="invalid-feedback">Emails do not match.</div>
+                  </div>
+                 </div>
+
+                  <!-- Contact Number -->
+                  <div class="position-relative form-group col-12">
+                    <div class="input-wrapper">
+                      <i class="fas fa-phone form-control-icon"></i>
+                      <input type="text" name="Mobile" id="txtMobile" class="form-control with-icon" placeholder="Contact Number" required>
+                      <div class="invalid-feedback">Please enter your contact number.</div>
+                    </div>
+                  </div>
+
+                  <!-- Hotel Category -->
+                  <div class="position-relative form-group col-12">
+                    <div class="input-wrapper">
+                      <i class="fas fa-star form-control-icon"></i>
+                      <select class="form-control" name="Category" id="txthotelcategory" required>
+                        <option selected disabled value="">Hotel Category</option>
+                        <option>2 Star</option>
+                        <option>3 Star</option>
+                        <option>4 Star</option>
+                        <option>5 Star</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a hotel category.</div>
+                    </div>
+                  </div>
+
+                  <!-- Check-in -->
+                  <div class="position-relative form-group col-12 col-sm-6">
+                    <div class="input-wrapper">
+                      <i class="fas fa-calendar-alt form-control-icon"></i>
+                      <input type="text" name="Check-In" id="txtchkin" class="form-control with-icon" placeholder="Check In" required>
+                      <div class="invalid-feedback">Please enter a check-in date.</div>
+                    </div>
+                  </div>
+
+                  <!-- Check-out -->
+                  <div class="position-relative form-group col-12 col-sm-6">
+                    <div class="input-wrapper">
+                      <i class="fas fa-calendar-check form-control-icon"></i>
+                      <input type="text" name="Check-Out" id="txtchkout" class="form-control with-icon" placeholder="Check Out" required>
+                      <div class="invalid-feedback">Please enter a check-out date.</div>
+                    </div>
+                  </div>
+
+                  <!-- Budget -->
+                  <div class="position-relative form-group col-12 col-sm-6">
+                    <div class="input-wrapper">
+                      <i class="fas fa-dollar-sign form-control-icon"></i>
+                      <input type="text" name="Budget" id="perdaybudget" class="form-control with-icon" placeholder="Per Day Budget" required>
+                      <div class="invalid-feedback">Please enter your per day budget.</div>
+                    </div>
+                  </div>
+
+                  <!-- Number of Rooms -->
+                  <div class="position-relative form-group col-12 col-sm-6">
+                    <div class="input-wrapper">
+                      <i class="fas fa-door-open form-control-icon"></i>
+                      <select name="Rooms" id="norooms" class="form-control with-icon" required>
+                        <option value="" selected>Number Of Rooms</option>
+                        <?php
+                          for ($i = 1; $i <= 25; $i++) {
+                            echo "<option value=\"$i\">$i</option>";
+                          }
+                        ?>
+                        <option value="25+">25+</option>
+                      </select>
+                      <div class="invalid-feedback">Please select the number of rooms.</div>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="justicent col-12">
+                    <button type="submit" class="playbtn">
+                      Submit Housing
+                      <span></span><span></span><span></span><span></span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Section -->
+<section id="about">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-7" data-aos="fade-right">
+        <h2 class="element element2">IDWeek 2025</h2>
+        <div class="box sec"></div>
+        <h4>Welcome to IDWeek 2025: Annual Meeting of Infectious Disease Experts</h4>
+        <p>Infectious Diseases Week 2025 (IDWeek) is scheduled for October 19 to 22, 2025, at the Georgia World Congress Center in Atlanta, Georgia. The event will be held in a hybrid format, offering both in-person and virtual attendance options to accommodate healthcare professionals from various locations and specialties.</p>
+        <p>IDWeek is a collaborative annual meeting organized by five leading organizations in infectious diseases: the Infectious Diseases Society of America (IDSA), the Society for Healthcare Epidemiology of America (SHEA), the HIV Medicine Association (HIVMA), the Pediatric Infectious Diseases Society (PIDS), and the Society of Infectious Diseases Pharmacists (SIDP). These groups provide a unified platform to support education and advancements in the prevention, diagnosis, and treatment of infectious diseases.</p>
+        <p>Each year, IDWeek gathers a diverse group of professionals, including physicians, pharmacists, researchers, nurses, epidemiologists, and public health experts. The conference covers a wide range of topics such as infection prevention, antimicrobial stewardship, emerging diseases, pediatric infections, HIV care, global health, and vaccination strategies. It offers attendees the chance to stay current with scientific research and evolving clinical practices.</p>
+        <p>Attendees can earn continuing education credits including CME, CPE, CNE, or MOC through designated sessions, supporting their professional development.</p>
+        <h6>Be sure to complete your registration soon to take advantage of discounted rates before they increase. Don’t miss this opportunity to join your peers at IDWeek 2025.</h6>
+      </div>
+      <div class="col-md-5 text-center" data-aos="fade-left">
+        <img src="assets/img/about-img.jpg" class="img-fluid rounded shadow" alt="About Idweek">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="stats-container">
+    <!-- Location -->
+    <div class="stat-box" data-aos="fade-right">
+      <div class="icon-box">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <div class="stat-number">Location</div>
+      <div class="stat-label">Georgia World Congress Center, <br>Atlanta, Georgia, USA</div>
+    </div>
+
+    <!-- Dates -->
+    <div class="stat-box" data-aos="fade-up">
+      <div class="icon-box">
+        <i class="fas fa-calendar-alt"></i>
+      </div>
+      <div class="stat-number">Conference Dates</div>
+      <div class="stat-label">October 19th - 22nd, 2025</div>
+    </div>
+
+    <!-- Attendees -->
+    <div class="stat-box" >
+      <div class="icon-box">
+        <i class="fas fa-users"></i>
+      </div>
+      <div class="stat-number" id="attendeeCount" data-target="20000+" >0 </div>
+      <div class="stat-label">  Attendees</div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Dates Section -->
+<section id="keydates">
+  <div class="container text-center">
+    <h2 class="text-center section-title mb-5 element element2" data-aos="zoom-in">Key Dates</h2>
+    <div class="box sec"></div>
+    <div class="row g-4">
+      <!-- July -->
+      <div class="col-md-4 date-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="event-card">
+          <h5><i class="fas fa-calendar-alt"></i> October 19–22, 2025 (In-person and virtual)</h5>
+          <p>Event Dates</p>
+        </div>
+      </div>
+      <div class="col-md-4 date-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="event-card">
+          <h5><i class="fas fa-calendar-alt"></i> February 18, 2025</h5>
+          <p>Regular Abstract Submission Opens</p>
+        </div>
+      </div>
+
+      <!-- August -->
+      <div class="col-md-4 date-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="event-card">
+          <h5><i class="fas fa-calendar-alt"></i> May 1, 2025</h5>
+          <p>Regular Abstract Submission Closes</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 date-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="event-card">
+          <h5><i class="fas fa-calendar-alt"></i> May 16, 2025</h5>
+          <p>IDBugBowl Team Registration Deadline</p>
+        </div>
+      </div>
+
+      <!-- September -->
+      <div class="col-md-4 date-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="event-card">
+          <h5><i class="fas fa-calendar-alt"></i> June 17, 2025</h5>
+          <p>Late Breaker Abstract Submission Opens</p>
+        </div>
+      </div>
+
+      <!-- October -->
+      <div class="col-md-4 date-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="event-card">
+          <h5><i class="fas fa-calendar-alt"></i> August 5, 2025</h5>
+          <p>Late Breaker Abstract Submission Closes</p>
+        </div>
+      </div>
+
+      <!-- November -->
+      <div class="col-md-4 date-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="event-card">
+          <h5><i class="fas fa-calendar-alt"></i> October 22, 2025</h5>
+          <p>IDBugBowl Event</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 date-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="event-card">
+          <h5><i class="fas fa-calendar-alt"></i> October 2, 2025</h5>
+          <p>Child Care Registration Deadline</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 date-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="event-card">
+          <h5><i class="fas fa-calendar-alt"></i> October 15–19, 2025</h5>
+          <p>Child Care Available</p>
+        </div>
+     </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Housing Section -->
+<section class="safe-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Side: Illustration -->
+      <div class="col-md-6 mb-4 mb-md-0 text-center">
+        <div class="position-relative">
+          <img src="assets/img/hotel.png" alt="Housing" class="img-fluid rounded" data-aos="fade-up">
+          <div class="secure-icon">
+            <div class="icon-circle">
+              <i class="fas fa-lock"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Text Content -->
+      <div class="col-md-6">
+        <h2 class="fw-bold element element2" data-aos="fade-up">Housing</h2>
+        <h3 class="fw-bold mb-4" data-aos="fade-up">Stay in the IDWeek 2025 hotel block and save!</h3>
+        <p class="mb-3" data-aos="fade-left">
+          Special discounted rates are available to IDWeek 2025 attendees as part of the registration benefits. Please note, you must be registered for IDWeek 2025 to reserve a room within the hotel block.
+        </p>
+
+        <h3 class="fw-bold mt-4" data-aos="fade-right">Why Stay in the IDWeek Hotel Block?</h3>
+        <ul class="list-unstyled mt-3" data-aos="fade-left">
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Hotels are vetted and approved by IDWeek</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Increased networking opportunities with fellow attendees</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> On-site assistance from official housing representatives</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Flexible booking with no change fees or full prepayment required</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Complimentary standard Wi-Fi in guest rooms for hotel block participants</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php include 'includes/footer.php'; ?>
+
+
+
